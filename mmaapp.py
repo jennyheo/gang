@@ -402,7 +402,7 @@ st.divider()
 #                     mime='application/octet-stream')
 
 
-with open("data/logo.png", "rb") as file:
+with open("./data/logo.png", "rb") as file:
     st.download_button(
         label="현역(모집)병 입영안내 다운로드(PDF)",
         data=file,
