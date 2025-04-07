@@ -393,6 +393,8 @@ with tab3:
 
 st.divider()
 
+st.markdown("""<div style="text-align: right;font-style: italic"><a href="#top">위로가기</a></div>""", unsafe_allow_html=True)
+
 # with open("dummy.pdf", "rb") as pdf_file:
 #     PDFbyte = pdf_file.read()
 
@@ -409,7 +411,7 @@ with open("logo.png", "rb") as file:
         file_name="flower.png",
         mime="image/png",
     )
-st.markdown("""<a href="#top"> Back to top</a>""", unsafe_allow_html=True)
+
 st.markdown('<div style="text-align: right;font-style: italic">Updated on 2025. 4. 3.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: right;"><b>강원지방병무청</b></div>', unsafe_allow_html=True)
 
