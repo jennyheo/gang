@@ -173,6 +173,15 @@ with tab1:
                st.markdown('온라인 신청')
                st.markdown('📖:orange-background[병무청 누리집 ▸ 병역진로설계 ▸ 상담신청절차안내] [바로가기](%s)' % "https://www.mma.go.kr/byjr/01/bYJRContents.do?mc=mma0002535")
                st.markdown(':blue[_※ 병역판정검사를 받지 않은 사람도 온라인서비스 신청 가능_]')
+          st.markdown("")
+          st.markdown("")
+          st.markdown(f"#### 🎯 현역(모집)병 안내 전체 내려받기")
+          with open("downloadfile.pdf", "rb") as pdf_file:
+               PDFbyte = pdf_file.read()
+               st.download_button(label="⭐ 현역(모집)병 입영안내 다운로드(PDF)",
+                    data=PDFbyte,
+                    file_name="현역(모집)병입영안내.pdf",
+                    mime='application/octet-stream')
 
 
 
@@ -393,15 +402,7 @@ with tab3:
 
 st.divider()
 
-st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none"> 🔝 맨위로가기</a></div>""", unsafe_allow_html=True)
-
-with open("downloadfile.pdf", "rb") as pdf_file:
-    PDFbyte = pdf_file.read()
-
-st.download_button(label="⭐ 현역(모집)병 입영안내 다운로드(PDF)",
-                    data=PDFbyte,
-                    file_name="현역(모집)병입영안내.pdf",
-                    mime='application/octet-stream')
+st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none;font-size:25pt;"> 🔝</a></div>""", unsafe_allow_html=True)
 
 
 # with open("logo.png", "rb") as file:
@@ -412,6 +413,6 @@ st.download_button(label="⭐ 현역(모집)병 입영안내 다운로드(PDF)",
 #         mime="image/png",
 #     )
 
-st.markdown('<div style="text-align: right;font-style: italic">Updated on 2025. 4. 3.</div>', unsafe_allow_html=True)
-st.markdown('<div style="text-align: right;"><b>강원지방병무청</b></div>', unsafe_allow_html=True)
-
+#st.markdown('<div style="text-align: right;font-style: italic">Updated on 2025. 4. 3.</div>', unsafe_allow_html=True)
+#st.markdown('<div style="text-align: right;"><b>강원지방병무청</b></div>', unsafe_allow_html=True)
+st.markdown('**강원지방병무청** (_Updated on 2025. 4. 3._)')
