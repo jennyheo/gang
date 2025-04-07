@@ -85,7 +85,7 @@ with tab1:
                st.markdown(':blue-background[**선발시기**]')
                st.markdown('매년 12월 중순경')
           st.divider()
-          st.write(f'📑 현역병 입영 본인선택')
+          st.write(f'✍️ 현역병 입영 본인선택')
           st.markdown('- 현역병 입영 본인선택은 입영 희망일자를 직접 선택하여 학업, 취업 등 진로설계에 차질이 없도록 하는 제도로 당해연도 및 다음연도 입영일자 신청으로 구분됩니다.')
           with st.expander('🧑🏾‍🤝‍🧑🏽 당해연도 본인선택'):
                st.markdown('입영계획 인원 대비 부족한 인원에 대하여 수시(매주 또는 격주) 접수하며, 그 주 월요일 병무청 누리집에 입영일자별 공석, 유의사항 등을 공지')
@@ -100,7 +100,7 @@ with tab1:
                st.markdown(':blue-background[**유의사항**]')
                st.markdown('신청, 취소, 변경이 불가능하거나 횟수가 제한되며, 기한이 정해져있음')
           st.divider()
-          st.write(f'📑 현역병 모집')
+          st.write(f'✍️ 현역병 모집')
           st.markdown('- 각 군 주요 군사특기를 개인의 자격·면허, 전공과 연계하여 군에서 필요로 하는 기술과 능력을 갖춘 사람을 선발합니다.')
           with st.expander('🔎 지원자격'):
                st.markdown('지원서 접수년도 기준 18세 이상 28세 이하의 현역병입영대상자')
@@ -156,7 +156,7 @@ with tab1:
                st.markdown(':blue-background[**전문특기병**]')
                st.markdown('군악, 의장')
           st.divider()
-          st.write(f'📑 병역진로설계')
+          st.write(f'✍️ 병역진로설계')
           st.markdown('- 입영 전 자신의 적성·전공 등을 고려하여 군 복무 및 전역 후 진로를 체계적으로 설계하도록 지원하는 프로그램입니다.')
           with st.expander('🤖 병역진로설계지원센터란'):
                st.markdown('병역을 이행할 사람에게 적성에 맞는 군특기 추천·상담, 군생활정보제공, 군체험·교육 프로그램 등을 상시 제공하는 복합공간')
@@ -186,7 +186,7 @@ with tab1:
 
 
      elif user_name == '사회복무요원소집대상' :
-          st.markdown(f'📑 사회복무요원 소집 제도')
+          st.markdown(f'✍️ 사회복무요원 소집 제도')
           st.markdown(f'- 공익을 목적으로 국가기관, 지방자치단체, 공공단체 및 사회복지시설에서 사회복지, 보건의료, 교육문화, 환경안전 등의 사회서비스 업무 및 행정업무 등을 지원하는 병역의무의 한 형태입니다.') 
           with st.expander('📢 대상'):
                st.markdown('병역판정검사 결과 보충역으로 병역처분된 사람')
@@ -202,7 +202,7 @@ with tab1:
                st.markdown('현역병 봉급 상당액의 보수 및 직무수행에 필요한 여비 등 지급')
 
           st.divider()
-          st.markdown(f'📑 사회복무요원 소집일자 및 복무기관 결정')
+          st.markdown(f'✍️ 사회복무요원 소집일자 및 복무기관 결정')
           st.markdown(f'- 사회복무요원 소집 신청은 본인이 직접 신청하는 본인선택과 신청하지 않은 사람에 대해 주소지 관할 지방병무청장이 소집순서에 따라 일자와 기관을 결정하는 직권통지로 구분됩니다.') 
      
           with st.expander('🙋🏻‍♂️ 본인선택'):
@@ -216,7 +216,7 @@ with tab1:
                st.markdown('본인선택하지 않은 별도·일반 소집대상으로 관할 지방병무청에서 연중 선발')
 
           st.divider()
-          st.markdown(f'📑 사회복무요원 현역복무 희망 신청')
+          st.markdown(f'✍️ 사회복무요원 현역복무 희망 신청')
           st.markdown(f'- 사회복무요원(복무중인 경우 포함)이 현역 복무를 희망하는 경우 신청합니다.') 
      
           with st.expander('📒 신청대상'):
