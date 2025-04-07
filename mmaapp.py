@@ -393,7 +393,7 @@ with tab3:
 
 st.divider()
 
-st.markdown("""<div style="text-align: right;font-style: italic"><a href="#top">위로가기</a></div>""", unsafe_allow_html=True)
+st.markdown("""<div style="text-align: right;font-style: italic"><a href="#top"> ⬆️ 위로가기</a></div>""", unsafe_allow_html=True)
 
 # with open("dummy.pdf", "rb") as pdf_file:
 #     PDFbyte = pdf_file.read()
