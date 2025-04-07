@@ -409,7 +409,7 @@ with open("logo.png", "rb") as file:
         file_name="flower.png",
         mime="image/png",
     )
-href=f"""<a href="<a href="#top"> Back to top</a>"""
+st.markdown("""<a href="<a href="#top"> Back to top</a>""")
 st.markdown('<div style="text-align: right;font-style: italic">Updated on 2025. 4. 3.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: right;"><b>강원지방병무청</b></div>', unsafe_allow_html=True)
 
