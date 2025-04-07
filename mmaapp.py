@@ -44,7 +44,7 @@ css = '''
 
 st.subheader('병역처분결과를 설명해드립니다')
 
-st.markdown("""<a id="top"></a>""",unsafe_allow_html=true)
+st.markdown("""<a id="top"></a>""", unsafe_allow_html=True)
 
 with st.expander('😄 알려드립니다'):
   st.write('병역판정검사(입영판정검사) 결과지 내용에 대해 궁금한 사항을 안내합니다.')
