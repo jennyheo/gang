@@ -51,7 +51,7 @@ with st.expander('😄 알려드립니다'):
   st.image('https://mma.go.kr/download/visual/CAIS_HPIS_202412020402149250.jpg', width=250)
 
 
-tab1, tab2, tab3 = st.tabs(['병역이행안내','검사결과참고치','바로가기']) #탭메뉴 가로형
+tab1, tab2, tab3 = st.tabs(['병역이행안내','검사결과참고치','바로가기➡️']) #탭메뉴 가로형
 
 st.markdown(css, unsafe_allow_html=True)
 
@@ -85,28 +85,28 @@ with tab1:
                st.markdown(':blue-background[**선발시기**]')
                st.markdown('매년 12월 중순경')
           st.divider()
-          st.write(f'➡️ 현역병 입영 본인선택')
+          st.write(f'📑 현역병 입영 본인선택')
           st.markdown('- 현역병 입영 본인선택은 입영 희망일자를 직접 선택하여 학업, 취업 등 진로설계에 차질이 없도록 하는 제도로 당해연도 및 다음연도 입영일자 신청으로 구분됩니다.')
           with st.expander('🧑🏾‍🤝‍🧑🏽 당해연도 본인선택'):
                st.markdown('입영계획 인원 대비 부족한 인원에 대하여 수시(매주 또는 격주) 접수하며, 그 주 월요일 병무청 누리집에 입영일자별 공석, 유의사항 등을 공지')
-               st.markdown('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 복무제도 ▸ 현역병,상근예비역 ▸ 입영신청 절차 및 복무기간] [바로가기](%s)' % "https://www.mma.go.kr/contents.do?mc=mma0000728")
+               st.markdown('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 복무제도 ▸ 현역병,상근예비역 ▸ 입영신청 절차 및 복무기간] [바로가기➡️](%s)' % "https://www.mma.go.kr/contents.do?mc=mma0000728")
           with st.expander('⏰ 다음연도 본인선택'):
                st.markdown('군 소요 범위 내 입영하는 해의 전년도에 입영일자를 선택하며, 지방청별 접수(공석수 및 신청일시 등 상이)')
                st.markdown(':blue-background[**입영시기**]')
                st.markdown('검사받은 다음해 1월 ~ 12월')
                st.markdown(':blue-background[**신청방법**]')
-               st.markdown('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 현역병,상근예비역 ▸ 입영신청 공지사항] [바로가기](%s)' % "https://www.mma.go.kr/board/boardList.do?gesipan_id=507&mc=mma0003311")
+               st.markdown('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 현역병,상근예비역 ▸ 입영신청 공지사항] [바로가기➡️](%s)' % "https://www.mma.go.kr/board/boardList.do?gesipan_id=507&mc=mma0003311")
                st.markdown(':blue[_※ 선착순 접수  \n※ 입영부대는 입영일자 신청 즉시 전산자동결정_]')
                st.markdown(':blue-background[**유의사항**]')
                st.markdown('신청, 취소, 변경이 불가능하거나 횟수가 제한되며, 기한이 정해져있음')
           st.divider()
-          st.write(f'➡️ 현역병 모집')
+          st.write(f'📑 현역병 모집')
           st.markdown('- 각 군 주요 군사특기를 개인의 자격·면허, 전공과 연계하여 군에서 필요로 하는 기술과 능력을 갖춘 사람을 선발합니다.')
           with st.expander('🔎 지원자격'):
                st.markdown('지원서 접수년도 기준 18세 이상 28세 이하의 현역병입영대상자')
           with st.expander('📊 지원 및 선발절차'):
                st.markdown('지원서 인터넷 접수 ▸ (1차)서류심사 ▸ (2차)최종선발 ')
-               st.markdown('📖:orange-background[병무청 누리집 ▸ 군지원(입영신청)안내 ▸ 모집안내서비스 ▸ 안내 및 지원절차] [바로가기](%s)' % "https://mma.go.kr/contents.do?mc=mma0000386")
+               st.markdown('📖:orange-background[병무청 누리집 ▸ 군지원(입영신청)안내 ▸ 모집안내서비스 ▸ 안내 및 지원절차] [바로가기➡️](%s)' % "https://mma.go.kr/contents.do?mc=mma0000386")
           with st.expander('1️⃣ 육군병 모집'):
                st.markdown(':blue-background[**모집 및 복무기간**]')
                st.markdown('기술행정병, 동반입대병 등 6개 분야 158개 특기 / 18개월 복무')
@@ -156,7 +156,7 @@ with tab1:
                st.markdown(':blue-background[**전문특기병**]')
                st.markdown('군악, 의장')
           st.divider()
-          st.write(f'➡️ 병역진로설계')
+          st.write(f'📑 병역진로설계')
           st.markdown('- 입영 전 자신의 적성·전공 등을 고려하여 군 복무 및 전역 후 진로를 체계적으로 설계하도록 지원하는 프로그램입니다.')
           with st.expander('🤖 병역진로설계지원센터란'):
                st.markdown('병역을 이행할 사람에게 적성에 맞는 군특기 추천·상담, 군생활정보제공, 군체험·교육 프로그램 등을 상시 제공하는 복합공간')
@@ -171,7 +171,7 @@ with tab1:
                st.markdown('군 보급품 전시, 군 장비 모의체험  \n (체력검정, 전차SIM, 드론VR등)')
           with st.expander('💡 병역진로설계서비스 신청방법'):
                st.markdown('온라인 신청')
-               st.markdown('📖:orange-background[병무청 누리집 ▸ 병역진로설계 ▸ 상담신청절차안내] [바로가기](%s)' % "https://www.mma.go.kr/byjr/01/bYJRContents.do?mc=mma0002535")
+               st.markdown('📖:orange-background[병무청 누리집 ▸ 병역진로설계 ▸ 상담신청절차안내] [바로가기➡️](%s)' % "https://www.mma.go.kr/byjr/01/bYJRContents.do?mc=mma0002535")
                st.markdown(':blue[_※ 병역판정검사를 받지 않은 사람도 온라인서비스 신청 가능_]')
           st.markdown("")
           st.markdown("")
@@ -186,7 +186,7 @@ with tab1:
 
 
      elif user_name == '사회복무요원소집대상' :
-          st.markdown(f'➡️ 사회복무요원 소집 제도')
+          st.markdown(f'📑 사회복무요원 소집 제도')
           st.markdown(f'- 공익을 목적으로 국가기관, 지방자치단체, 공공단체 및 사회복지시설에서 사회복지, 보건의료, 교육문화, 환경안전 등의 사회서비스 업무 및 행정업무 등을 지원하는 병역의무의 한 형태입니다.') 
           with st.expander('📢 대상'):
                st.markdown('병역판정검사 결과 보충역으로 병역처분된 사람')
@@ -202,7 +202,7 @@ with tab1:
                st.markdown('현역병 봉급 상당액의 보수 및 직무수행에 필요한 여비 등 지급')
 
           st.divider()
-          st.markdown(f'➡️ 사회복무요원 소집일자 및 복무기관 결정')
+          st.markdown(f'📑 사회복무요원 소집일자 및 복무기관 결정')
           st.markdown(f'- 사회복무요원 소집 신청은 본인이 직접 신청하는 본인선택과 신청하지 않은 사람에 대해 주소지 관할 지방병무청장이 소집순서에 따라 일자와 기관을 결정하는 직권통지로 구분됩니다.') 
      
           with st.expander('🙋🏻‍♂️ 본인선택'):
@@ -216,17 +216,17 @@ with tab1:
                st.markdown('본인선택하지 않은 별도·일반 소집대상으로 관할 지방병무청에서 연중 선발')
 
           st.divider()
-          st.markdown(f'➡️ 사회복무요원 현역복무 희망 신청')
+          st.markdown(f'📑 사회복무요원 현역복무 희망 신청')
           st.markdown(f'- 사회복무요원(복무중인 경우 포함)이 현역 복무를 희망하는 경우 신청합니다.') 
      
           with st.expander('📒 신청대상'):
                st.write('사회복무요원 소집대상, 사회복무요원으로 복무 중인 사람')
-               st.write('(단, 남은 복무기간이 현역의 복무기간으로 환산했을때 6개월 이상 남은 사람으로 한함)')
+               st.write('(단, 남은 복무기간이 현역의 복무기간으로 환산했을때 6개월 이상 남은 사람으로 한정함)')
                st.write(':blue[_※수형사유 보충역 및 현역부적합 심사에 따른 보충역은 비대상_]')
           with st.expander('🚩 처리절차'):
                st.write('신청서 제출 ▸ 대상여부 확인 ▸ 병역처분 변경 신청 ▸ (신체검사 없이) 현역병입영 대상자로 처분변경 후 현역병 입영신청 또는 모집병 지원')
           with st.expander('💻 신청방법'):
-               st.write('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 병역판정검사 ▸ 질병·심신장애 및 학력에 의한 병역처분변경원 출원 안내] [바로가기](%s)' % "https://mma.go.kr/contents.do?mc=usr0000173")
+               st.write('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 병역판정검사 ▸ 질병·심신장애 및 학력에 의한 병역처분변경원 출원 안내] [바로가기➡️](%s)' % "https://mma.go.kr/contents.do?mc=usr0000173")
                st.write(':blue[_※ 신청은 1회로 제한, 신청에 따라 현역병입영 대상자로 변경된 사람은 신청을 취소할 수 없음_]')
 
 
@@ -393,7 +393,7 @@ with tab2:
 
 
 with tab3:
-     st.write('아래 링크를 누르시면 병무청 민원포털로 연결됩니다.')
+     st.write('아래 링크를 누르시면 병무청 민원포털(앱)로 연결됩니다.')
      st.write('인증이 필요한 화면입니다.')
      st.link_button("건강검진 결과서 바로가기", "https://mwpt.mma.go.kr/caisBMHS/index_mwps.jsp?menuNo=22255&menuAo=ZYnYjXIyd39nf%2BxJF4DUXQ%3D%3D&menuBo=tE6wUVinCwBg3Se1ezI7%2BQ%3D%3D&menuCo=Cf1jQaND5RsiOghxWnqA%2Fuho0pXo%2Fl5qT55ltM5R5LvrgXzkfG5E9%2FueCa%2FIcCz0Rh9KPR3EMs6a4koFYlGUw3Mk58%2FpElUhuf8bKn21lMZj3bs2zsG1Bm7aJ7rdDJcU")
 
