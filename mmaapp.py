@@ -406,7 +406,7 @@ st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decora
 
 with open("logo.png", "rb") as file:
     st.download_button(
-        label="현역(모집)병 입영안내 다운로드(PDF)",
+        label="⭐ 현역(모집)병 입영안내 다운로드(PDF)",
         data=file,
         file_name="flower.png",
         mime="image/png",
