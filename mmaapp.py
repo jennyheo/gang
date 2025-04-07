@@ -395,22 +395,22 @@ st.divider()
 
 st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none"> 🔝 맨위로가기</a></div>""", unsafe_allow_html=True)
 
-# with open("dummy.pdf", "rb") as pdf_file:
-#     PDFbyte = pdf_file.read()
+with open("downloadfile.pdf", "rb") as pdf_file:
+    PDFbyte = pdf_file.read()
 
-# st.download_button(label="Export_Report",
-#                     data=PDFbyte,
-#                     file_name="test.pdf",
-#                     mime='application/octet-stream')
+st.download_button(label="⭐ 현역(모집)병 입영안내 다운로드(PDF)",
+                    data=PDFbyte,
+                    file_name="현역(모집)병입영안내.pdf",
+                    mime='application/octet-stream')
 
 
-with open("logo.png", "rb") as file:
-    st.download_button(
-        label="⭐ 현역(모집)병 입영안내 다운로드(PDF)",
-        data=file,
-        file_name="flower.png",
-        mime="image/png",
-    )
+# with open("logo.png", "rb") as file:
+#     st.download_button(
+#         label="강원지방병무청",
+#         data=file,
+#         file_name="flower.png",
+#         mime="image/png",
+#     )
 
 st.markdown('<div style="text-align: right;font-style: italic">Updated on 2025. 4. 3.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: right;"><b>강원지방병무청</b></div>', unsafe_allow_html=True)
