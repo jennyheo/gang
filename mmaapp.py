@@ -77,30 +77,14 @@ with tab1:
           st.markdown('')
 
      if user_name == '현역병입영대상' :
-          st.markdown('현역병 입영은 군소요 적성별 충원을 위하여 입영일자를 결정하는 일반현역병(상근예비역)과  각 군에서 필요로 하는 기술과 능력을 갖춘 사람을 선발하는 현역모집병으로 구분됩니다.')
-          st.markdown('- 일반현역병은 병무청에서 의무부과 순서에 따라 직권으로 입영일자를 결정하거나, 병역의무자가 직접 입영일자를 선택할 수 있습니다.')
-          with st.expander('📝 입영일자 직권 결정'):
-               st.markdown(':blue-background[**대상**]')
-               st.markdown('입영일자를 선택하지 않은 일반 현역병입영대상자, 졸업예정자, 별도 입영대상자에 대하여 의무부과 순서에 따라 직권으로 입영일자를 결정')
-               st.markdown(':blue-background[**입영부대**]')
-               st.markdown('육군(육군훈련소 포함 17개 입영부대)으로 입영')
-               st.markdown(':blue-background[**복무기간**]')
-               st.markdown('18개월 복무(신병교육기간 5주 포함)')
-          with st.expander('🗂️ 상근예비역 소집'):
-               st.markdown(':blue-background[**대상**]')
-               st.markdown('다음 해 현역병 입영대상자(19세 병역판정검사자, 졸업예정자, 입영일자 본인선택자)로 소집 권역에 그해 10월 31일 이전부터 가족과 함께 거주하는 사람')
-               st.markdown(':blue-background[**선발인원**]')
-               st.markdown('권역별소요인원 대비 유고율을 감안한 일정 인원')
-               st.markdown(':blue-background[**선발순위 및 우선선발 기준**]')
-               st.markdown('선발순위 : 학력과 신체등급이 낮은 순  \n 우선선발 : 수형자, 자녀양육자, 생계곤란자')
-               st.markdown(':blue-background[**선발시기**]')
-               st.markdown('매년 12월 중순경')
-          st.divider()
-          st.write(f'✍️ 현역병 입영 본인선택')
-          st.markdown('- 현역병 입영 본인선택은 입영 희망일자를 직접 선택하여 학업, 취업 등 진로설계에 차질이 없도록 하는 제도로 당해연도 및 다음연도 입영일자 신청으로 구분됩니다.')
+          st.markdown('현역병 입영은 일반현역병(상근예비역)과 군에서 필요로 하는 기술과 능력을 갖춘 사람을 선발하는 현역모집병으로 구분됩니다.')
+          st.write(f'✍️ (일반현역병) 내가 원하는 시기에 입영하고 싶을때')
+          #st.write(f'✍️ 현역병 입영 본인선택')
+          st.markdown('- 학업, 취업 등 예정된 진로에 맞춰 원하는 시기에 입영하고 싶을때는 당해연도 및 다음연도 본인선택을 신청하세요.')
+          #st.markdown('- 현역병 입영 본인선택은 입영 희망일자를 직접 선택하여 학업, 취업 등 진로설계에 차질이 없도록 하는 제도로 당해연도 및 다음연도 입영일자 신청으로 구분됩니다.')
           with st.expander('🧑🏾‍🤝‍🧑🏽 당해연도 본인선택'):
                st.markdown('입영계획 인원 대비 부족한 인원에 대하여 수시(매주 또는 격주) 접수하며, 그 주 월요일 병무청 누리집에 입영일자별 공석, 유의사항 등을 공지')
-               st.markdown("""<div style="background-color:#efefef;padding:4px;border:1px solid red;margin-bottom:15px">19세(06년생) 병역판정검사 수검자는 올해 하반기(5월이후) 당해연도 본인선택 접수 예정  \n 일정확정시 병무청 누리집 공지 및 알림톡 발송</div>""", unsafe_allow_html=True) 
+               st.markdown("""<div style="background-color:#efefef;padding:4px;border:1px solid red;margin-bottom:15px">19세(06년생) 병역판정검사 수검자는 올해 하반기(5월이후) 당해연도 본인선택 접수 예정<br> 일정확정시 병무청 누리집 공지 및 알림톡 발송</div>""", unsafe_allow_html=True) 
                st.markdown('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 복무제도 ▸ 현역병,상근예비역 ▸ 입영신청 절차 및 복무기간] [바로가기➡️](%s)' % "https://www.mma.go.kr/contents.do?mc=mma0000728")
           with st.expander('⏰ 다음연도 본인선택'):
                st.markdown('입영하는 해의 전년도에 미리 다음연도의 입영일자를 선택하며, 지방청별 접수(공석수 및 신청일시 등 상이)')
@@ -112,11 +96,35 @@ with tab1:
                st.markdown(':blue-background[**유의사항**]')
                st.markdown('신청, 취소, 변경이 불가능하거나 횟수가 제한되며, 기한이 정해져있음')
           st.divider()
-          st.write(f'✍️ 현역병 모집')
-          st.markdown('- 각 군 주요 군사특기를 개인의 자격·면허, 전공과 연계하여 군에서 필요로 하는 기술과 능력을 갖춘 사람을 선발합니다.')
-          with st.expander('🔎 지원자격'):
+          st.write(f'✍️ 병무청에서 직권으로 입영일자를 결정')
+          st.markdown('- 병무청에서 입영일자/부대를 결정하여 통지서를 보내드립니다.')
+          with st.expander('📝 입영일자 직권 결정'):
+               st.markdown(':blue-background[**대상**]')
+               st.markdown('입영일자를 선택하지 않은 일반 현역병입영대상자, 졸업예정자, 별도 입영대상자에 대하여 의무부과 순서에 따라 직권으로 입영일자를 결정')
+               st.markdown(':blue-background[**입영부대**]')
+               st.markdown('육군(육군훈련소 포함 17개 입영부대)으로 입영')
+               st.markdown(':blue-background[**복무기간**]')
+               st.markdown('18개월 복무(신병교육기간 5주 포함)')
+          
+          with st.expander('🗂️ 상근예비역 소집'):
+               st.markdown('군소요지역에 거주하는 대상자 중 선발하여 지역방위와 관련된 분야에 복무합니다.')
+               st.markdown(':blue-background[**대상**]')
+               st.markdown('다음 해 현역병 입영대상자(19세 병역판정검사자, 졸업예정자, 입영일자 본인선택자)로 소집 권역에 그해 10월 31일 이전부터 가족과 함께 거주하는 사람')
+               st.markdown(':blue-background[**복무형태**]')
+               st.markdown('기본군사교육훈련 후 상근예비역으로 소집되어 집에서 출·퇴근 근무')
+               st.markdown(':blue-background[**선발인원**]')
+               st.markdown('권역별소요인원 대비 유고율을 감안한 일정 인원')
+               st.markdown(':blue-background[**선발순위 및 우선선발 기준**]')
+               st.markdown('선발순위 : 학력과 신체등급이 낮은 순  \n 우선선발 : 수형자, 자녀양육자, 생계곤란자')
+               st.markdown(':blue-background[**선발시기**]')
+               st.markdown('매년 12월 중순경')
+          st.divider()
+          st.write(f'✍️ (현역병모집) 자격·면허, 전공별 지원')
+          st.markdown('- 주요 군사특기를 개인의 자격·면허, 전공과 연계하여 군에서 필요로 하는 기술과 능력을 갖춘 사람을 선발합니다.')
+          with st.expander('🔎 현역병 모집'):
+               st.markdown(':blue-background[**지원자격**]')
                st.markdown('지원서 접수년도 기준 18세 이상 28세 이하의 현역병입영대상자')
-          with st.expander('📊 지원 및 선발절차'):
+               st.markdown(':blue-background[**지원 및 선발절차**]')
                st.markdown('지원서 인터넷 접수 ▸ (1차)서류심사 ▸ (2차)최종선발 ')
                st.markdown('📖:orange-background[병무청 누리집 ▸ 군지원(입영신청)안내 ▸ 모집안내서비스 ▸ 안내 및 지원절차] [바로가기➡️](%s)' % "https://mma.go.kr/contents.do?mc=mma0000386")
           with st.expander('1️⃣ 육군병 모집'):
