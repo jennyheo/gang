@@ -261,7 +261,7 @@ with tab1:
 
 with tab2:
      st.subheader('검사결과 중 어떤 항목이 궁금하신가요?', divider=True)
-
+     st.markdown('궁금한 항목을 선택해보세요')
      if 'kkk' not in st.session_state:
           st.session_state['kkk'] = ''
 
