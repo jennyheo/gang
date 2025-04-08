@@ -394,12 +394,23 @@ with tab2:
 
 
 with tab3:
-     st.write('아래 링크를 누르시면 병무청 민원포털(앱)로 연결됩니다.')
-     st.write('인증이 필요한 화면입니다.')
-     st.link_button("건강검진 결과서 바로가기", "https://mwpt.mma.go.kr/caisBMHS/index_mwps.jsp?menuNo=22255&menuAo=ZYnYjXIyd39nf%2BxJF4DUXQ%3D%3D&menuBo=tE6wUVinCwBg3Se1ezI7%2BQ%3D%3D&menuCo=Cf1jQaND5RsiOghxWnqA%2Fuho0pXo%2Fl5qT55ltM5R5LvrgXzkfG5E9%2FueCa%2FIcCz0Rh9KPR3EMs6a4koFYlGUw3Mk58%2FpElUhuf8bKn21lMZj3bs2zsG1Bm7aJ7rdDJcU")
+     st.markdown('아래 링크를 누르시면 병무청 민원포털(앱)로 연결됩니다.')
+     st.markdown('인증이 필요한 화면입니다.')
 
+     st.link_button("건강검진 결과서 바로가기", "https://mwpt.mma.go.kr/caisBMHS/index_mwps.jsp?menuNo=22255&menuAo=ZYnYjXIyd39nf%2BxJF4DUXQ%3D%3D&menuBo=tE6wUVinCwBg3Se1ezI7%2BQ%3D%3D&menuCo=Cf1jQaND5RsiOghxWnqA%2Fuho0pXo%2Fl5qT55ltM5R5LvrgXzkfG5E9%2FueCa%2FIcCz0Rh9KPR3EMs6a4koFYlGUw3Mk58%2FpElUhuf8bKn21lMZj3bs2zsG1Bm7aJ7rdDJcU")
      st.link_button("현역병 본인선택안내 바로가기", "https://www.mma.go.kr/contents.do?mc=mma0000728")
 
+     st.divider()
+     st.markdown(f"#### 🌎 민원포털(앱) 본인인증 수단 안내")
+     with st.expander('🖥️ PC 사용자'):
+          st.markdown('- 공동인증서(구, 공인인증서), 금융인증서, 아이핀, 디지털 원패스')
+          st.markdown('- 간편인증(민간인증서) : 카카오톡, 삼성패스, 페이코, KB모바일인증서, 통신사 패스, 네이버, 신한인증서 등')
+          st.markdown('- 병무청 e-병무지갑 앱(간편인증)')
+          st.markdown('- 나라사랑 이메일(국외에 체류 또는 여행중인 병역의무자에 한함)')
+     with st.expander('📱 스마트폰 사용자(병무청 앱)'):
+          st.markdown('- 공동인증서(구, 공인인증서)')
+          st.markdown('- 간편인증(민간인증서)')
+          st.markdown('- 블록체인 간편인증(e-병무지갑)')
 
 st.divider()
 
