@@ -412,7 +412,7 @@ with tab3:
           st.markdown('- 간편인증(민간인증서)')
           st.markdown('- 블록체인 간편인증(e-병무지갑)')
 
-st.divider()
+st.divider() 
 
 st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none;font-size:25pt;"> 🔝</a></div>""", unsafe_allow_html=True)
 
