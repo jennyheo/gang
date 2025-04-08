@@ -8,6 +8,17 @@ st.set_page_config(
      page_title="병역이행안내"
      , page_icon="💎"
 )
+st.markdown("""
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WK6DCVP4ZK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WK6DCVP4ZK');
+</script>
+""", unsafe_allow_html=True)
 
 #탭메뉴의 글자크기 지정
 css = ''' 
@@ -412,7 +423,7 @@ with tab3:
           st.markdown('- 간편인증(민간인증서)')
           st.markdown('- 블록체인 간편인증(e-병무지갑)')
 
-st.divider() 
+st.divider()
 
 st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none;font-size:25pt;"> 🔝</a></div>""", unsafe_allow_html=True)
 
