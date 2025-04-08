@@ -58,7 +58,7 @@ st.markdown(css, unsafe_allow_html=True)
 
 with tab1:
      st.subheader('병역이행안내', divider=True)
-     user_name = st.selectbox('',['병역처분결과를 선택하세요','현역병입영대상','사회복무요원소집대상','전시근로역','병역면제','재신체검사대상'], label_visibility = 'hidden')
+     user_name = st.selectbox('병역처분결과',['병역처분결과를 선택하세요','현역병입영대상','사회복무요원소집대상','전시근로역','병역면제','재신체검사대상'], label_visibility = 'hidden')
 
      if user_name != '병역처분결과를 선택하세요':
           st.markdown(f"#### 🎯 {user_name}")
@@ -89,9 +89,11 @@ with tab1:
           st.markdown('- 현역병 입영 본인선택은 입영 희망일자를 직접 선택하여 학업, 취업 등 진로설계에 차질이 없도록 하는 제도로 당해연도 및 다음연도 입영일자 신청으로 구분됩니다.')
           with st.expander('🧑🏾‍🤝‍🧑🏽 당해연도 본인선택'):
                st.markdown('입영계획 인원 대비 부족한 인원에 대하여 수시(매주 또는 격주) 접수하며, 그 주 월요일 병무청 누리집에 입영일자별 공석, 유의사항 등을 공지')
+               st.markdown('19세(06년생) 병역판정검사 수검자는 올해 하반기(5월이후) 당해연도 본인선택 접수 예정  \n 일정확정시 병무청 누리집 공지 및 알림톡 발송')
+               st.markdown("""<div style="background-color:#efefef;padding:4px;border:1px solid red;margin-bottom:15px">19세(06년생) 병역판정검사 수검자는 올해 하반기(5월이후) 당해연도 본인선택 접수 예정  \n 일정확정시 병무청 누리집 공지 및 알림톡 발송</div>""", unsafe_allow_html=True) 
                st.markdown('📖:orange-background[병무청 누리집 ▸ 병역이행안내 ▸ 복무제도 ▸ 현역병,상근예비역 ▸ 입영신청 절차 및 복무기간] [바로가기➡️](%s)' % "https://www.mma.go.kr/contents.do?mc=mma0000728")
           with st.expander('⏰ 다음연도 본인선택'):
-               st.markdown('군 소요 범위 내 입영하는 해의 전년도에 입영일자를 선택하며, 지방청별 접수(공석수 및 신청일시 등 상이)')
+               st.markdown('입영하는 해의 전년도에 미리 다음연도의 입영일자를 선택하며, 지방청별 접수(공석수 및 신청일시 등 상이)')
                st.markdown(':blue-background[**입영시기**]')
                st.markdown('검사받은 다음해 1월 ~ 12월')
                st.markdown(':blue-background[**신청방법**]')
