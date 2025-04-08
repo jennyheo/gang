@@ -85,13 +85,13 @@ with tab1:
           with st.expander('🧑🏾‍🤝‍🧑🏽 당해연도 본인선택'):
                st.markdown('입영계획 인원 대비 부족한 인원에 대하여 수시(매주 또는 격주) 접수하며, 그 주 월요일 병무청 누리집에 입영일자별 공석, 유의사항 등을 공지')
                st.markdown("""<div style="background-color:#efefef;padding:4px;border:1px solid red;margin-bottom:15px">19세(06년생) 병역판정검사 수검자는 올해 하반기(5월이후) 당해연도 본인선택 접수 예정<br> 일정확정시 병무청 누리집 공지 및 알림톡 발송</div>""", unsafe_allow_html=True) 
-               st.markdown('📖:orange-background[입영신청 절차 및 복무기간] [바로가기➡️](%s)' % "https://www.mma.go.kr/contents.do?mc=mma0000728")
+               st.link_button("입영신청 절차 및 복무기간 안내➡️", "https://www.mma.go.kr/contents.do?mc=mma0000728")   
           with st.expander('⏰ 다음연도 본인선택'):
                st.markdown('입영하는 해의 전년도에 미리 다음연도의 입영일자를 선택하며, 지방청별 접수(공석수 및 신청일시 등 상이)')
                st.markdown(':blue-background[**입영시기**]')
                st.markdown('검사받은 다음해 1월 ~ 12월')
                st.markdown(':blue-background[**신청방법**]')
-               st.markdown('📖:orange-background[입영신청 공지사항] [바로가기➡️](%s)' % "https://www.mma.go.kr/board/boardList.do?gesipan_id=507&mc=mma0003311")
+               st.link_button("입영신청 공지사항➡️", "https://www.mma.go.kr/board/boardList.do?gesipan_id=507&mc=mma0003311")   
                st.markdown(':blue[_※ 선착순 접수  \n※ 입영부대는 입영일자 신청 즉시 전산자동결정_]')
                st.markdown(':blue-background[**유의사항**]')
                st.markdown('신청, 취소, 변경이 불가능하거나 횟수가 제한되며, 기한이 정해져있음')
@@ -126,7 +126,7 @@ with tab1:
                st.markdown('지원서 접수년도 기준 18세 이상 28세 이하의 현역병입영대상자')
                st.markdown(':blue-background[**지원 및 선발절차**]')
                st.markdown('지원서 인터넷 접수 ▸ (1차)서류심사 ▸ (2차)최종선발 ')
-               st.markdown('📖:orange-background[모집안내서비스] [바로가기➡️](%s)' % "https://mma.go.kr/contents.do?mc=mma0000386")
+               st.link_button("모집안내서비스➡️", "https://mma.go.kr/contents.do?mc=mma0000386")    
           with st.expander('1️⃣ 육군병 모집'):
                st.markdown(':blue-background[**모집 및 복무기간**]')
                st.markdown('기술행정병, 동반입대병 등 6개 분야 158개 특기 / 18개월 복무')
@@ -191,7 +191,7 @@ with tab1:
                st.markdown('군 보급품 전시, 군 장비 모의체험  \n (체력검정, 전차SIM, 드론VR등)')
           with st.expander('💡 병역진로설계서비스 신청방법'):
                st.markdown('온라인 신청')
-               st.markdown('📖:orange-background[병역진로설계 상담신청안내] [바로가기➡️](%s)' % "https://www.mma.go.kr/byjr/01/bYJRContents.do?mc=mma0002535")
+               st.link_button("병역진로설계 상담신청 안내➡️", "https://www.mma.go.kr/byjr/01/bYJRContents.do?mc=mma0002535")               
                st.markdown(':blue[_※ 병역판정검사를 받지 않은 사람도 온라인서비스 신청 가능_]')
           st.markdown("")
           st.markdown("")
@@ -245,8 +245,7 @@ with tab1:
                st.write(':blue[_※수형사유 보충역 및 현역부적합 심사에 따른 보충역은 비대상_]')
           with st.expander('🚩 처리절차'):
                st.write('신청서 제출 ▸ 대상여부 확인 ▸ 병역처분 변경 신청 ▸ (신체검사 없이) 현역병입영 대상자로 처분변경 후 현역병 입영신청 또는 모집병 지원')
-          with st.expander('💻 신청방법'):
-               st.write('📖:orange-background[병역처분변경원 출원 안내] [바로가기➡️](%s)' % "https://mma.go.kr/contents.do?mc=usr0000173")
+               st.link_button("병역처분변경원 출원 안내➡️", "https://mma.go.kr/contents.do?mc=usr0000173")
                st.write(':blue[_※ 신청은 1회로 제한, 신청에 따라 현역병입영 대상자로 변경된 사람은 신청을 취소할 수 없음_]')
 
 
@@ -416,8 +415,8 @@ with tab3:
      st.markdown('아래 링크를 누르시면 병무청 민원포털(앱)로 연결됩니다.')
      st.markdown('인증이 필요한 화면입니다.')
 
-     st.link_button("건강검진 결과서 바로가기", "https://mwpt.mma.go.kr/caisBMHS/index_mwps.jsp?menuNo=22255&menuAo=ZYnYjXIyd39nf%2BxJF4DUXQ%3D%3D&menuBo=tE6wUVinCwBg3Se1ezI7%2BQ%3D%3D&menuCo=Cf1jQaND5RsiOghxWnqA%2Fuho0pXo%2Fl5qT55ltM5R5LvrgXzkfG5E9%2FueCa%2FIcCz0Rh9KPR3EMs6a4koFYlGUw3Mk58%2FpElUhuf8bKn21lMZj3bs2zsG1Bm7aJ7rdDJcU")
-     st.link_button("현역병 본인선택안내 바로가기", "https://www.mma.go.kr/contents.do?mc=mma0000728")
+     st.link_button("건강검진 결과서➡️", "https://mwpt.mma.go.kr/caisBMHS/index_mwps.jsp?menuNo=22255&menuAo=ZYnYjXIyd39nf%2BxJF4DUXQ%3D%3D&menuBo=tE6wUVinCwBg3Se1ezI7%2BQ%3D%3D&menuCo=Cf1jQaND5RsiOghxWnqA%2Fuho0pXo%2Fl5qT55ltM5R5LvrgXzkfG5E9%2FueCa%2FIcCz0Rh9KPR3EMs6a4koFYlGUw3Mk58%2FpElUhuf8bKn21lMZj3bs2zsG1Bm7aJ7rdDJcU")
+     st.link_button("현역병 본인선택안내➡️", "https://www.mma.go.kr/contents.do?mc=mma0000728")
 
      st.divider()
      st.markdown(f"#### 🌎 민원포털(앱) 본인인증 수단 안내")
