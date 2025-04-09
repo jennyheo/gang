@@ -275,9 +275,9 @@ with tab2:
           st.write('이완기 혈압 90, 수축기 혈압 140 미만 시 정상입니다.')
           v1, v2 = st.slider("❓ 혈압수치의 이완기와 수축기 수치를 입력하세요.", 40, 200, (90, 140))
           if v1 <= 90 and v2 <= 140:
-               st.write(f"혈압  이완기({v1}), 수축기({v2}) : 🟢 정상입니다.") 
+               st.success(f"혈압  이완기({v1}), 수축기({v2}) : 🟢 정상입니다.") 
           else:
-               st.write(f"혈압  이완기({v1}), 수축기({v2}) : 🔴 이상입니다.")
+               st.error(f"혈압  이완기({v1}), 수축기({v2}) : 🔴 이상입니다.")
 
      if st.button('AST', use_container_width=True): #0-2304
           st.session_state['kkk'] = 'AST'
@@ -288,9 +288,9 @@ with tab2:
                       ' 정상범위는 0 ~ 40 IU/L 이하입니다')
           v = st.slider("❓ 검사결과지의 AST수치를 입력하세요", 0, 100, 40)
           if v <= 40:
-               st.write(f"AST수치 {v} : 🟢 정상입니다") 
+               st.success(f"AST수치 {v} : 🟢 정상입니다") 
           elif v > 40:
-               st.write(f"AST수치 {v} : 🔴 이상입니다") 
+               st.error(f"AST수치 {v} : 🔴 이상입니다") 
 
 
      if st.button('ALT', use_container_width=True): #0~1230
@@ -301,9 +301,9 @@ with tab2:
           st.write('간세포 내에 존재하는 효소로 간 손상 시 혈중으로 유출되어 혈중 수치가 증가하게 됩니다. 주로 간에만 존재합니다. 간염을 발견하기에 가장 효과적인 검사 항목 중 하나입니다.  \n정상범위는 0 ~ 41 IU/L입니다.')
           v = st.slider("❓ 검사결과지의 ALT수치를 입력하세요", 0, 100, 41)
           if v <= 41:
-               st.write(f"ALT수치 {v} : 🟢 정상입니다") 
+               st.success(f"ALT수치 {v} : 🟢 정상입니다") 
           elif v > 41:
-               st.write(f"ALT수치 {v} : 🔴 이상입니다") 
+               st.error(f"ALT수치 {v} : 🔴 이상입니다") 
 
 
      if st.button('간염', use_container_width=True): 
@@ -335,9 +335,9 @@ with tab2:
           st.write('공복 혈당은 8시간 이상의 공복상태에서 혈액, 즉 혈장 속의 포도당 농도입니다.  \n정상범위는 74~106 mg/dL입니다')
           v = st.slider("❓ 검사결과지의 Glucoss수치를 입력하세요", 0, 200, 106)
           if v <= 106 and v >= 74:
-               st.write(f"Glucose수치 {v} : 🟢 정상입니다") 
+               st.success(f"Glucose수치 {v} : 🟢 정상입니다") 
           else:
-               st.write(f"Glucose수치 {v} : 🔴 이상입니다") 
+               st.error(f"Glucose수치 {v} : 🔴 이상입니다") 
 
      if st.button('HbA1c', use_container_width=True):
           st.session_state['kkk'] = 'HbA1c'
@@ -354,9 +354,9 @@ with tab2:
           st.write('백혈구수가 1,000mm³가 넘으면 백혈구증가증으로 판단합니다. 반대로 비정상적으로 백혈구가 감소한 상태는 백혈구감소증이라 부릅니다.  \n정상범위는 4.0~10.0 X 10³/μL입니다')
           v = st.slider("❓ 검사결과지의 WBC수치를 입력하세요", 0, 20, 10)
           if v <= 10 and v >= 4:
-               st.write(f"WBC수치 {v} : 🟢 정상입니다") 
+               st.success(f"WBC수치 {v} : 🟢 정상입니다") 
           else:
-               st.write(f"WBC수치 {v} : 🔴 이상입니다")
+               st.error(f"WBC수치 {v} : 🔴 이상입니다")
 
      if st.button('RBC', use_container_width=True): #0~8.44
           st.session_state['kkk'] = 'RBC'
@@ -366,9 +366,9 @@ with tab2:
           st.write('혈액 내 적혈구가 감소하거나 낮으면 혈액이 운반하는 능력이 저하되어 빈혈이 발생합니다.  \n정상범위는 4.2~6.3 X 10⁶/μL입니다')
           v = st.slider("❓ 검사결과지의 RBC수치를 입력하세요", 0.0, 10.0, 6.3)
           if v <= 6.3 and v >= 4.2:
-               st.write(f"RBC수치 {v} : 🟢 정상입니다") 
+               st.success(f"RBC수치 {v} : 🟢 정상입니다") 
           else:
-               st.write(f"RBC수치 {v} : 🔴 이상입니다")
+               st.error(f"RBC수치 {v} : 🔴 이상입니다")
 
      if st.button('Hb', use_container_width=True): #0~20
           st.session_state['kkk'] = 'Hb'
@@ -378,9 +378,9 @@ with tab2:
           st.write('Hb(Hemoglobin)은 혈액 속의 적혈구에 있는 단백질로, 혈색소라고도 합니다. 혈색소는 몸 전체에 산소를 운반하는 역할을 합니다.  \n정상범위는 13.7~17.5g/dL입니다')
           v = st.slider("❓ 검사결과지의 HB수치를 입력하세요", 0.0, 25.0, 17.5)
           if v <= 17.5 and v >= 13.7:
-               st.write(f"HB수치 {v} : 🟢 정상입니다") 
+               st.success(f"HB수치 {v} : 🟢 정상입니다") 
           else:
-               st.write(f"HB수치 {v} : 🔴 이상입니다")
+               st.error(f"HB수치 {v} : 🔴 이상입니다")
 
      if st.button('PLT', use_container_width=True):
           st.session_state['kkk'] = 'PLT'
@@ -390,9 +390,9 @@ with tab2:
           st.write('혈소판은 혈관이 손상되었을 때 혈장에서 일어나는 응고과정에 관여합니다.  \n정상범위는 130 ~ 400 X 10³/μL입니다')
           v = st.slider("❓ 검사결과지의 PLT수치를 입력하세요", 0, 500, 130)
           if v <= 400 and v >= 130:
-               st.write(f"PLT수치 {v} : 🟢 정상입니다") 
+               st.success(f"PLT수치 {v} : 🟢 정상입니다") 
           else:
-               st.write(f"PLT수치 {v} : 🔴 이상입니다")
+               st.error(f"PLT수치 {v} : 🔴 이상입니다")
 
 
      if st.session_state.kkk == False:
