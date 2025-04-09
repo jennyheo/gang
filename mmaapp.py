@@ -109,7 +109,7 @@ with tab1:
                st.markdown('지원서 접수년도 기준 18세 이상 28세 이하의 현역병입영대상자')
                st.markdown(':blue-background[**지원 및 선발절차**]')
                st.markdown('지원서 인터넷 접수 ▸ (1차)서류심사 ▸ (2차)최종선발 ')
-          st.link_button("모집안내서비스➡️", "https://mma.go.kr/contents.do?mc=mma0000386")    
+          st.link_button("육·해(해병)·공군 모집안내➡️", "https://mma.go.kr/contents.do?mc=mma0000386")    
           # with st.expander('1️⃣ 육군병 모집'):
           #      st.markdown(':blue-background[**모집 및 복무기간**]')
           #      st.markdown('기술행정병, 동반입대병 등 6개 분야 158개 특기 / 18개월 복무')
