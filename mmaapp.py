@@ -1,24 +1,11 @@
 # -*- codi     ng: utf-8 -*-
 
 import streamlit as st
-import pandas as pd
-import pyarrow as pa
 
 st.set_page_config(
      page_title="병역이행안내"
      , page_icon="💎"
 )
-st.markdown("""
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WK6DCVP4ZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WK6DCVP4ZK');
-</script>
-""", unsafe_allow_html=True)
 
 #탭메뉴의 글자크기 지정
 css = ''' 
