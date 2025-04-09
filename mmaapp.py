@@ -246,8 +246,8 @@ with tab1:
                st.write(':blue[_※수형사유 보충역 및 현역부적합 심사에 따른 보충역은 비대상_]')
           with st.expander('🚩 처리절차'):
                st.write('신청서 제출 ▸ 대상여부 확인 ▸ 병역처분 변경 신청 ▸ (신체검사 없이) 현역병입영 대상자로 처분변경 후 현역병 입영신청 또는 모집병 지원')
-               st.link_button("병역처분변경원 출원 안내➡️", "https://mma.go.kr/contents.do?mc=usr0000173")
-               st.write(':blue[_※ 신청은 1회로 제한, 신청에 따라 현역병입영 대상자로 변경된 사람은 신청을 취소할 수 없음_]')
+          st.link_button("병역처분변경원 출원 안내➡️", "https://mma.go.kr/contents.do?mc=usr0000173")
+          st.write(':blue[_※ 신청은 1회로 제한, 신청에 따라 현역병입영 대상자로 변경된 사람은 신청을 취소할 수 없음_]')
 
 
      elif user_name == '전시근로역' :
