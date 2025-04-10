@@ -395,14 +395,17 @@ supabase: Client = create_client(url, key)
 if "user_id" not in st.session_state:
     st.session_state["user_id"] = str(uuid.uuid4())
 user_id = st.session_state["user_id"]
-#st.write(user_id)
+st.write(user_id)
+
+st.write(st.session_state["user_id"])
 # 오늘 날짜
-today = datetime.today().isoformat()
+today = datetime.now().strftime("%Y-%m-%d")
 
 # 방문 기록 확인 후 없으면 기록 저장
 def log_once_per_day(user_id, date):
     # 오늘 접속 기록 있는지 확인
     res = supabase.table("mmaconn").select("user_id").eq("user_id", user_id).eq("date", date).execute()
+    st.write(res)
     if not res.data:
         # 없으면 기록 저장
         supabase.table("mmaconn").insert({
@@ -410,15 +413,12 @@ def log_once_per_day(user_id, date):
             "date": date
         }).execute()
 
-
 log_once_per_day(user_id, today)
 
 response = supabase.table("mmaconn").select("date").execute()
 
-today_str = datetime.now().strftime("%Y-%m-%d")
-
 if response.data:
     df = pd.DataFrame(response.data)
     total_visits = len(df)
-    today_visits = (df["date"] == today_str).sum()
+    today_visits = (df["date"] == today).sum()
     st.markdown(f"Visit Today {today_visits} / Total {total_visits}")
