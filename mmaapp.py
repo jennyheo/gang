@@ -1,6 +1,7 @@
-# -*- codi     ng: utf-8 -*-
-
 import streamlit as st
+from datetime import datetime #pip install streamlit-datetime-picker
+import pandas as pd #pip install pandas
+from supabase import create_client, Client #pip install streamlit supabase
 
 st.set_page_config(
      page_title="병역이행안내"
@@ -431,3 +432,35 @@ with tab3:
 st.divider()
 st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none;font-size:25pt;"> 🔝</a></div>""", unsafe_allow_html=True)
 st.markdown('**강원지방병무청** (_Updated on 2025. 4. 9._)')
+
+
+url = st.secrets["supabase"]["url"]
+key = st.secrets["supabase"]["key"]
+supabase: Client = create_client(url, key)
+
+today_str = datetime.now().strftime("%Y%m%d")
+if "visited_today" not in st.session_state:
+    st.session_state.visited_today = False
+
+if not st.session_state.visited_today:
+    response = supabase.table("mmaconn").select("date").eq("date", today_str).execute()
+    if response and not response.data:
+        insert_response = supabase.table("mmaconn").insert({"date": today_str}).execute()
+        if insert_response.error:
+            st.error(f"저장 오류: {insert_response.error.message}")
+        else:
+            st.session_state.visited_today = True
+    else:
+        st.session_state.visited_today = True
+
+response = supabase.table("mmaconn").select("date").execute()
+
+if response.data:
+    df = pd.DataFrame(response.data)
+    total_visits = len(df)
+    today_visits = (df["date"] == today_str).sum()
+    st.markdown(f"Visit : Today {today_visits} / Total {total_visits}")
+else:
+    st.warning("데이터가 없습니다.")
+    st.text(f"에러: {response.error}")
+
