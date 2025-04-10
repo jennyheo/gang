@@ -384,7 +384,7 @@ with tab3:
 
 st.divider()
 st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none;font-size:25pt;"> 🔝</a></div>""", unsafe_allow_html=True)
-st.markdown('**강원지방병무청** (_Updated on 2025. 4. 9._)')
+st.markdown('**강원지방병무청** (_Updated on 2025. 4. 10._)')
 
 
 url = st.secrets["supabase"]["url"]
@@ -395,21 +395,23 @@ supabase: Client = create_client(url, key)
 if "user_id" not in st.session_state:
     st.session_state["user_id"] = str(uuid.uuid4())
 user_id = st.session_state["user_id"]
-
+#st.write(user_id)
 # 오늘 날짜
 today = datetime.today().isoformat()
 
 # 방문 기록 확인 후 없으면 기록 저장
 def log_once_per_day(user_id, date):
     # 오늘 접속 기록 있는지 확인
-    res = supabase.table("mmaconn").select("id").eq("user_id", user_id).eq("date", date).execute()
-    st.write(user_id)
+    res = supabase.table("mmaconn").select("user_id").eq("user_id", user_id).eq("date", date).execute()
     if not res.data:
         # 없으면 기록 저장
         supabase.table("mmaconn").insert({
             "user_id": user_id,
             "date": date
         }).execute()
+
+
+log_once_per_day(user_id, today)
 
 response = supabase.table("mmaconn").select("date").execute()
 
