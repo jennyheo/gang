@@ -439,19 +439,27 @@ key = st.secrets["supabase"]["key"]
 supabase: Client = create_client(url, key)
 
 today_str = datetime.now().strftime("%Y%m%d")
-if "visited_today" not in st.session_state:
-    st.session_state.visited_today = False
 
-if not st.session_state.visited_today:
-    response = supabase.table("mmaconn").select("date").eq("date", today_str).execute()
-    if response and not response.data:
-        insert_response = supabase.table("mmaconn").insert({"date": today_str}).execute()
-        if insert_response.error:
-            st.error(f"저장 오류: {insert_response.error.message}")
-        else:
-            st.session_state.visited_today = True
-    else:
-        st.session_state.visited_today = True
+
+
+if "visited" not in st.session_state:
+    st.session_state.visited=True
+    supabase.table("mmaconn").insert ({"date":today_str}).execute()
+
+
+# if "visited_today" not in st.session_state:
+#     st.session_state.visited_today = False
+
+# if not st.session_state.visited_today:
+#     response = supabase.table("mmaconn").select("date").eq("date", today_str).execute()
+#     if response and not response.data:
+#         insert_response = supabase.table("mmaconn").insert({"date": today_str}).execute()
+#         if insert_response.error:
+#             st.error(f"저장 오류: {insert_response.error.message}")
+#         else:
+#             st.session_state.visited_today = True
+#     else:
+#         st.session_state.visited_today = True
 
 response = supabase.table("mmaconn").select("date").execute()
 
