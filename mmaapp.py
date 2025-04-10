@@ -403,6 +403,7 @@ today = datetime.today().isoformat()
 def log_once_per_day(user_id, date):
     # 오늘 접속 기록 있는지 확인
     res = supabase.table("mmaconn").select("id").eq("user_id", user_id).eq("date", date).execute()
+	st.write(res)
     if not res.data:
         # 없으면 기록 저장
         supabase.table("mmaconn").insert({
