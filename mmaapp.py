@@ -3,6 +3,7 @@ from datetime import datetime #pip install streamlit-datetime-picker
 import pandas as pd #pip install pandas
 from supabase import create_client, Client #pip install streamlit supabase
 import uuid
+import pytz
 
 st.set_page_config(
      page_title="병역이행안내"
@@ -396,7 +397,9 @@ if "user_id" not in st.session_state:
     st.session_state["user_id"] = str(uuid.uuid4())
 user_id = st.session_state["user_id"]
 # 오늘 날짜
-today = datetime.now().strftime("%Y-%m-%d")
+# 한국 시간(KST)으로 현재 시간 얻기
+kst = pytz.timezone('Asia/Seoul')
+today = datetime.now(kst).strftime("%Y-%m-%d")
 
 # 방문 기록 확인 후 없으면 기록 저장
 def log_once_per_day(user_id, date):
