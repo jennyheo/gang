@@ -484,10 +484,10 @@ today = date.today().isoformat()
 # 방문 기록 확인 후 없으면 기록 저장
 def log_visit_once_per_day(user_id, visit_date):
     # 오늘 접속 기록 있는지 확인
-    res = supabase.table("visits").select("id").eq("user_id", user_id).eq("visit_date", visit_date).execute()
+    res = supabase.table("mmaconn").select("id").eq("user_id", user_id).eq("visit_date", visit_date).execute()
     if not res.data:
         # 없으면 기록 저장
-        supabase.table("visits").insert({
+        supabase.table("mmaconn").insert({
             "user_id": user_id,
             "visit_date": visit_date
         }).execute()
