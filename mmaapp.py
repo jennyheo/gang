@@ -387,7 +387,7 @@ st.markdown('**강원지방병무청** (_Updated on 2025. 4. 9._)')
 
 
 url = st.secrets["supabase"]["url"]
-key = st.secrets["supabase"]["key"]
+key = st.secrets["supabase"]["service_key"]
 supabase: Client = create_client(url, key)
 
 today_str = datetime.now().strftime("%Y%m%d")
