@@ -98,54 +98,6 @@ with tab1:
                st.markdown(':blue-background[**지원 및 선발절차**]')
                st.markdown('지원서 인터넷 접수 ▸ (1차)서류심사 ▸ (2차)최종선발 ')
           st.link_button("육·해(해병)·공군 모집안내➡️", "https://mma.go.kr/contents.do?mc=mma0000386")    
-          # with st.expander('1️⃣ 육군병 모집'):
-          #      st.markdown(':blue-background[**모집 및 복무기간**]')
-          #      st.markdown('기술행정병, 동반입대병 등 6개 분야 158개 특기 / 18개월 복무')
-          #      st.divider()
-          #      st.markdown(':blue-background[**기술행정병**]')
-          #      st.markdown('자격·면허, 전공 등과 연계하여 모집 특기별로 선발되어 관련된 분야에 복무  \n :blue[_※ 통신분야, 차량운전 등 122개 특기_]')
-          #      st.markdown(':blue-background[**전문특기병**]')
-          #      st.markdown('특수한 자격·면허, 전공, 경력이 필요하거나 선발의 전문성이 요구되어 별도의 지원자격이나 선발기준을 정하여 모집  \n :blue[_※ 어학병, 군사과학기술병 등 36개 특기_]')
-          #      st.markdown(':blue-background[**동반입대병**]')
-          #      st.markdown('친구 또는 친척과 함께 입영하여 같은 생활권 범위 부대에서 복무')
-          #      st.markdown(':blue-background[**직계가족복무부대병**]')
-          #      st.markdown('직계존속·형제자매 및 외조부모가 복무를 마쳤거나 복무중인 부대에서 복무  \n :blue[_※ 가족이 현역간부인 경우는 현재 복무중인 부대 지원 불가_]')
-          #      st.markdown(':blue-background[**연고지복무병**]')
-          #      st.markdown('주소지 등 연고지 인근의 전방부대에서 복무')
-          #      st.markdown('강원지역 연고지 지원가능 시·군  \n (영서) 춘천, 홍천, 양구, 화천, 인제, 철원, 횡성  \n (영동) 속초, 양양, 고성')
-          #      st.markdown(':blue[_※ 연고지 : 지원서 접수일 현재 지원하는 부대 연고지역에 1년 이상 주민등록 설정 등_]')
-          # with st.expander('2️⃣ 해군병 모집'):
-          #      st.markdown(':blue-background[**모집분야 및 복무기간**]')
-          #      st.markdown('일반·전문기술병 등 5개분야 16개 계열 / 20개월 복무')
-          #      st.divider()
-          #      st.markdown(':blue-background[**일반·기술병**]')
-          #      st.markdown('일반, 전산, 조리, 항공, 전자, 통신, 기관, 화생방, 전기, 건축토목, 수송, 의무')
-          #      st.markdown(':blue-background[**전문특기병**]')
-          #      st.markdown('군악, 문화홍보, 특전, 심해잠수')
-          #      st.markdown(':blue-background[**복무지역선택병**]')
-          #      st.markdown('일반, 기관, 조리')
-          #      st.markdown(':blue-background[**동반입대병**]')
-          #      st.markdown('일반')
-          # with st.expander('3️⃣ 해병대병 모집'):
-          #      st.markdown(':blue-background[**모집분야 및 복무기간**]')
-          #      st.markdown('일반·전문기술병 등 5개분야 8개 계열 / 18개월 복무')
-          #      st.divider()
-          #      st.markdown(':blue-background[**일반·기술병**]')
-          #      st.markdown('일반, 수색, 화학, 공병, 무기정비, 수송')
-          #      st.markdown(':blue-background[**전문특기병**]')
-          #      st.markdown('군악, 의장')
-          #      st.markdown(':blue-background[**동반입대병**]')
-          #      st.markdown('일반')            
-          #      st.markdown(':blue-background[**직계가족복무부대병**]')
-          #      st.markdown('일반')
-          # with st.expander('4️⃣ 공군병 모집'):
-          #      st.markdown(':blue-background[**모집분야 및 복무기간**]')
-          #      st.markdown('일반·전문기술병 등 3개분야 10개 직종 / 21개월 복무')
-          #      st.divider()
-          #      st.markdown(':blue-background[**일반·기술병**]')
-          #      st.markdown('일반, 전자계산, 화생방, 의무, 기계, 차량운전, 차량정비, 통신전자전기')
-          #      st.markdown(':blue-background[**전문특기병**]')
-          #      st.markdown('군악, 의장')
           st.divider()
           st.write(f'✍️ (직권통지) 입영일자를 본인선택하지 않으면')
           st.markdown('- 병무청에서 입영일자/부대를 결정하여 통지서를 보내드립니다.')
@@ -445,21 +397,6 @@ today_str = datetime.now().strftime("%Y%m%d")
 if "visited" not in st.session_state:
     st.session_state.visited=True
     supabase.table("mmaconn").insert ({"date":today_str}).execute()
-
-
-# if "visited_today" not in st.session_state:
-#     st.session_state.visited_today = False
-
-# if not st.session_state.visited_today:
-#     response = supabase.table("mmaconn").select("date").eq("date", today_str).execute()
-#     if response and not response.data:
-#         insert_response = supabase.table("mmaconn").insert({"date": today_str}).execute()
-#         if insert_response.error:
-#             st.error(f"저장 오류: {insert_response.error.message}")
-#         else:
-#             st.session_state.visited_today = True
-#     else:
-#         st.session_state.visited_today = True
 
 response = supabase.table("mmaconn").select("date").execute()
 
