@@ -1,9 +1,9 @@
 import streamlit as st
-from datetime import datetime #pip install streamlit-datetime-picker
-import pandas as pd #pip install pandas
-from supabase import create_client, Client #pip install streamlit supabase
-import uuid
-import pytz
+# from datetime import datetime #pip install streamlit-datetime-picker
+# import pandas as pd #pip install pandas
+# from supabase import create_client, Client #pip install streamlit supabase
+# import uuid
+# import pytz
 st.set_page_config(
      page_title="병역이행안내"
      , page_icon="💎"
@@ -384,37 +384,4 @@ with tab3:
 
 st.divider()
 st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none;font-size:25pt;"> 🔝</a></div>""", unsafe_allow_html=True)
-st.markdown('**강원지방병무청** (_Updated on 2025. 4. 10._)')
-
-
-url = st.secrets["supabase"]["url"]
-key = st.secrets["supabase"]["service_key"]
-supabase: Client = create_client(url, key)
-
-# 세션당 고정된 유저 ID 만들기 (브라우저 열고 있는 동안 유지됨)
-if "user_id" not in st.session_state:
-    st.session_state["user_id"] = str(uuid.uuid4())
-user_id = st.session_state["user_id"]
-
-# 한국 시간으로 오늘 날짜
-kst = pytz.timezone('Asia/Seoul')
-today = datetime.now(kst).strftime("%Y-%m-%d")
-
-# 오늘 날짜에 해당 유저 기록이 없으면 DB에 저장
-res = supabase.table("mmaconn").select("user_id").eq("user_id", user_id).eq("date", today).execute()
-if not res.data:
-    created_date = datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S")
-    supabase.table("mmaconn").insert({
-        "user_id": user_id,
-        "date": today,
-        "created_date": created_date
-    }).execute()
-
-# 방문 통계 출력
-response = supabase.table("mmaconn").select("date").execute()
-
-if response.data:
-    df = pd.DataFrame(response.data)
-    total_visits = len(df)
-    today_visits = (df["date"] == today).sum()
-    st.markdown(f"**Visit Today:** {today_visits} / **Total:** {total_visits}")
+st.markdown('**강원지방병무청** (_Updated on 2025. 4. 11._)')
