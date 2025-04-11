@@ -4,7 +4,6 @@ import pandas as pd #pip install pandas
 from supabase import create_client, Client #pip install streamlit supabase
 import uuid
 import pytz
-
 st.set_page_config(
      page_title="병역이행안내"
      , page_icon="💎"
@@ -400,20 +399,23 @@ user_id = st.session_state["user_id"]
 # 한국 시간(KST)으로 현재 시간 얻기
 kst = pytz.timezone('Asia/Seoul')
 today = datetime.now(kst).strftime("%Y-%m-%d")
+crdt = datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S")
+#st.write(crdt)
 
 # 방문 기록 확인 후 없으면 기록 저장
-def log_once_per_day(user_id, date):
+def log_once_per_day(user_id, date, cr):
     # 오늘 접속 기록 있는지 확인
     res = supabase.table("mmaconn").select("user_id").eq("user_id", user_id).eq("date", date).execute()
     if not res.data:
         # 없으면 기록 저장
         supabase.table("mmaconn").insert({
             "user_id": user_id,
-            "date": date
+            "date": date,
+            "created_date" : crdt
         }).execute()
 
-log_once_per_day(user_id, today)
-
+log_once_per_day(user_id, today, crdt)
+#st.write(today)
 response = supabase.table("mmaconn").select("date").execute()
 
 if response.data:
