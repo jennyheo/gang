@@ -391,8 +391,10 @@ url = st.secrets["supabase"]["url"]
 key = st.secrets["supabase"]["service_key"]
 supabase: Client = create_client(url, key)
 
-# 고유 유저 ID를 세션 대신 고정 생성 (브라우저 열 때마다 새로 생성됨)
-user_id = str(uuid.uuid4())
+# 세션당 고정된 유저 ID 만들기 (브라우저 열고 있는 동안 유지됨)
+if "user_id" not in st.session_state:
+    st.session_state["user_id"] = str(uuid.uuid4())
+user_id = st.session_state["user_id"]
 
 # 한국 시간으로 오늘 날짜
 kst = pytz.timezone('Asia/Seoul')
