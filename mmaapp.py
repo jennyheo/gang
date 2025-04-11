@@ -391,31 +391,22 @@ url = st.secrets["supabase"]["url"]
 key = st.secrets["supabase"]["service_key"]
 supabase: Client = create_client(url, key)
 
-# 세션당 고유 유저 ID 생성 (브라우저가 닫힐 때까지 유지)
-if "user_id" not in st.session_state:
-    st.session_state["user_id"] = str(uuid.uuid4())
-user_id = st.session_state["user_id"]
+# 고유 유저 ID를 세션 대신 고정 생성 (브라우저 열 때마다 새로 생성됨)
+user_id = str(uuid.uuid4())
 
-# 한국 시간(KST)으로 오늘 날짜
+# 한국 시간으로 오늘 날짜
 kst = pytz.timezone('Asia/Seoul')
 today = datetime.now(kst).strftime("%Y-%m-%d")
 
-# 하루 한 번만 기록 저장
-def log_once_per_day(user_id, date):
-    if "already_logged" not in st.session_state:
-        # DB에서 오늘 방문 기록 있는지 확인
-        res = supabase.table("mmaconn").select("user_id").eq("user_id", user_id).eq("date", date).execute()
-        if not res.data:
-            created_date = datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S")
-            supabase.table("mmaconn").insert({
-                "user_id": user_id,
-                "date": date,
-                "created_date": created_date
-            }).execute()
-        # 세션에 기록 여부 저장
-        st.session_state["already_logged"] = True
-
-log_once_per_day(user_id, today)
+# 오늘 날짜에 해당 유저 기록이 없으면 DB에 저장
+res = supabase.table("mmaconn").select("user_id").eq("user_id", user_id).eq("date", today).execute()
+if not res.data:
+    created_date = datetime.now(kst).strftime("%Y-%m-%d %H:%M:%S")
+    supabase.table("mmaconn").insert({
+        "user_id": user_id,
+        "date": today,
+        "created_date": created_date
+    }).execute()
 
 # 방문 통계 출력
 response = supabase.table("mmaconn").select("date").execute()
