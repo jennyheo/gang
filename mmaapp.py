@@ -360,7 +360,7 @@ with tab3:
      st.markdown('아래 링크를 누르시면 병무청 민원포털(앱)로 연결됩니다.')
      st.markdown('인증이 필요한 화면입니다.')
      st.link_button("병무청 앱➡️", "https://mwpt.mma.go.kr")
-     st.link_button("병역이행안내➡️", "https://mma.go.kr/contents.do?mc=usr0000041")
+     #st.link_button("병역이행안내➡️", "https://mma.go.kr/contents.do?mc=usr0000041")
      st.divider()
      st.markdown(f"#### 🌎 민원포털(앱) 본인인증 수단 안내")
      with st.expander('🖥️ PC 사용자'):
