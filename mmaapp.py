@@ -383,4 +383,4 @@ with tab3:
 
 st.divider()
 st.markdown("""<div style="text-align: right;"><a href="#top" style="text-decoration-line:none;font-size:25pt;"> 🔝</a></div>""", unsafe_allow_html=True)
-st.markdown('**강원지방병무청** (_Updated on 2025. 4. 21._)')
+st.markdown('**강원지방병무청** (_Updated on 2026. 3. 6._)')
